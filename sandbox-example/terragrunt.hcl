@@ -1,5 +1,5 @@
 terraform {
-  source = ${get_repo_root()}/modules
+  source = "../modules"
 }
 
 remote_state {
@@ -13,8 +13,9 @@ remote_state {
 }
 
 inputs = {
-  project_id = "sandbox-terraform"
-  services   = ["compute.googleapis.com", 
+  project_id = "sandbox-terraform-404607"
+  services   = ["serviceusage.googleapis.com",
+                "compute.googleapis.com",
                 "logging.googleapis.com",
                 "iam.googleapis.com"]
 }
